@@ -1,11 +1,7 @@
 #include <stdio.h>
+#include "fonction1.h"
 
 
-int add( int *a, int *b){
-	int c;
-	c = *a+*b;
-	return c;
-}
 
 
 int main(int argc, char **argv)
@@ -13,10 +9,9 @@ int main(int argc, char **argv)
 	int x,y,z;
 	x=4;
 	y=7;
-	z= add(&x,&y);
-	printf("%d",z,"\n");
-	printf("YYYOOOOO\n");
 	
+	z = allo(x,y);
+	printf("%d\n",z);
 	
 	return 0;
 }
