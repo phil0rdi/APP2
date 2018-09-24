@@ -1,14 +1,26 @@
 #include <stdio.h>
 #include "fonction1.h"
 #include "matrice.h"
- 
+#include "serie.h"
 
 const int test = 12;
 
 int main(int argc, char **argv)
 {
+	//SERIES
+	//printf("8^3= ");
+	//printf("%f ",Pow(-1,4));
 
+	//printf("0!= ");
+	//printf("%f ",Factoriel(0));
 
+	//printf("sin = ");
+	//printf("%f ",Sin(2*3.1459));
+	
+	//printf("cos = ");
+	//printf("%f ",Cos(2*3.1459));
+	
+	
 	//MATRICES
  	/*
 	//additionmatrice	
