@@ -1,10 +1,9 @@
-#ifndef ADDITIONMATRICE_H
-#define ADDITIONMATRICE_H
+#ifndef MATRICE_H
+#define MATRICE_H
 #include <stdio.h>
 
-#define M 4
-#define N 3
-
+#define M 2
+#define N 2
 void PrintMatrice(int m[M][N]){
  for(int i = 0; i < M; i++)
     {
@@ -29,5 +28,21 @@ void AdditionMatrice(int a[M][N],int b[M][N],int c[M][N])
     }
 }
 
+void MultiplicationMatrice(int a[M][N],int b[M][N],int c[M][N])
+{
+    for(int i = 0; i < M; i++)
+    {
+        for(int j = 0; j < N; j++)
+        {
+            int sum = 0 ;
+            for(int k = 0; k < N; k++)
+            {
+                sum += a[i][k] * b[k][j];
+            }
+            
+            c[i][j] = sum;
+        }
+    }
+}
 
 #endif
