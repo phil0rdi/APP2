@@ -1,25 +1,18 @@
+/********
+Fichier: serie.h
+Auteurs: Philippe Turcotte turp2707
+         Alexandre Lafleur lafa3307
+Date: 3 octobre 2018
+Description: Fonctions de puissance, de factoriel, de sinus et de cosinus
+********/
 #ifndef SERIE_H
 #define SERIE_H
 #include <stdio.h>
 
-/*Calcul du sinus avec une série : Cette opération retourne la valeur du calcul du sinus
-à partir d’une série (voir l’annexe C). L’angle en radians est spécifié lors l’appel et la
-valeur retournée est le résultat du calcul. Les deux valeurs sont des nombres réels.
-Le nombre de termes utilisés dans la série pour le calcul est spécifié globalement
-uniquement par une constante (const ou #define) et n’est pas passé en paramètre.
+#define C 5
 
-
-Calcul du cosinus avec une série : Cette opération retourne la valeur du calcul du
-cosinus à partir d’une série (voir l’annexe C). L’angle en radians est spécifié lors de
-l’appel et la valeur retournée est le résultat du calcul. Les deux valeurs sont des
-nombres réels. Le nombre de termes utilisés dans la série pour le calcul est spécifié
-globalement uniquement par une constante (const ou #define) et n’est pas passé en
-paramètre.*/
-
-#define C 10
-
+//calculates positive powers
 float Pow(float x,int p){
-    //calculates positive powers
     if (p>=0) {
         float sum = 1;
         for(int i = 0; i < p; i++)
@@ -35,6 +28,7 @@ float Pow(float x,int p){
     }
 }
 
+//Calculates positive integers factorials
 float Factoriel(float x){
     if(x<0) printf("ERREUR: x<0");
     if (x>1) {
@@ -46,6 +40,13 @@ float Factoriel(float x){
     }
 }
 
+
+/*Calcul du cosinus avec une série : Cette opération retourne la valeur du calcul du
+cosinus à partir d’une série (voir l’annexe C). L’angle en radians(x) est spécifié lors de
+l’appel et la valeur retournée est le résultat du calcul. Les deux valeurs sont des
+nombres réels. Le nombre de termes utilisés dans la série pour le calcul est spécifié
+globalement uniquement par une constante (C) et n’est pas passé en
+paramètre.*/
 float Sin(float x)
 {
     float rep = 0;
@@ -68,6 +69,14 @@ float Sin(float x)
     return rep;
 }
 
+
+
+/*Calcul du cosinus avec une série : Cette opération retourne la valeur du calcul du
+cosinus à partir d’une série (voir l’annexe C). L’angle en radians(x) est spécifié lors de
+l’appel et la valeur retournée est le résultat du calcul. Les deux valeurs sont des
+nombres réels. Le nombre de termes utilisés dans la série pour le calcul est spécifié
+globalement uniquement par une constante (C) et n’est pas passé en
+paramètre.*/
 float Cos(float x)
 {
     float rep = 0;
