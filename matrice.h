@@ -10,8 +10,12 @@ Description: Fonctions d'addition, de multiplication et d'affichage de matrices
 #define MATRICE_H
 #include <stdio.h>
 
-#define M 2
+#define M 3
 #define N 2
+
+// Description: fonction qui affiche dans la console une matrice M par N
+// Préconditions:  matrice d'entiers m M x N
+// Postconditions: aucune
 void PrintMatrice(int m[M][N]){
  for(int i = 0; i < M; i++)
     {
@@ -25,11 +29,9 @@ void PrintMatrice(int m[M][N]){
     //printf("\n");
 }
 
-/*Addition de deux matrices : Cette opération fait l’addition de deux matrices fournies
-lors de l’appel(matriceA ET matriceB) et le résultat est donné dans une troisième matrice aussi fournie
-lors de l’appel(matriceC). Les matrices ont m lignes et n colonnes et ces deux valeurs sont
-des constantes (M et N) définies globalement et ne sont pas passées en
-paramètres. Cette opération n’a pas de valeur de retour.*/
+// Description: fonction qui additionne deux matrices M par N 
+// Préconditions:  matrices d'entiers matriceA, matriceB, matriceC M x N.
+// Postconditions: aucune, réponse enregistrée dans matriceC
 void AdditionMatrice(int matriceA[M][N],int matriceB[M][N],int matriceC[M][N])
 {
     for(int i = 0; i < M; i++)
@@ -41,11 +43,9 @@ void AdditionMatrice(int matriceA[M][N],int matriceB[M][N],int matriceC[M][N])
     }
 }
 
-/*Multiplication de deux matrices : Cette opération fait la multiplication de deux matrices
-carrées fournies lors de l’appel(matriceA et matriceB) et le résultat est donné dans une troisième
-matrice aussi fournie lors de l’appel(matriceC). Les matrices sont de dimensions n qui est une
-constante (N) définie globalement et n’est pas passée en paramètres.
-Cette opération n’a pas de valeur de retour*/
+// Description: fonction qui multiplie deux matrices M par N 
+// Préconditions:  matrices d'entiers matriceA, matriceB, matriceC M x N.
+// Postconditions: aucune, réponse enregistrée dans matriceC
 void MultiplicationMatrice(int matriceA[M][N],int matriceB[M][N],int matriceC[M][N])
 {
     for(int i = 0; i < M; i++)

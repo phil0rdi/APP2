@@ -11,7 +11,9 @@ Description: Fonctions de puissance, de factoriel, de sinus et de cosinus
 
 #define C 5
 
-//calculates positive powers
+// Description: fonction qui calcule la p-ieme puissance d'un réel
+// Préconditions: réel x, puissance entière p
+// Postconditions: réel x^p
 float Pow(float x,int p){
     if (p>=0) {
         float sum = 1;
@@ -28,7 +30,9 @@ float Pow(float x,int p){
     }
 }
 
-//Calculates positive integers factorials
+// Description: fonction qui calcule la factorielle d'un entier positif
+// Préconditions: entier x
+// Postconditions: entier x!
 float Factoriel(float x){
     if(x<0) printf("ERREUR: x<0");
     if (x>1) {
@@ -41,12 +45,9 @@ float Factoriel(float x){
 }
 
 
-/*Calcul du cosinus avec une série : Cette opération retourne la valeur du calcul du
-cosinus à partir d’une série (voir l’annexe C). L’angle en radians(x) est spécifié lors de
-l’appel et la valeur retournée est le résultat du calcul. Les deux valeurs sont des
-nombres réels. Le nombre de termes utilisés dans la série pour le calcul est spécifié
-globalement uniquement par une constante (C) et n’est pas passé en
-paramètre.*/
+// Description: fonction qui calcule le sinus d'une valeur à partir d'une série de C termes
+// Préconditions: réel x
+// Postconditions: réel sin(x)
 float Sin(float x)
 {
     float rep = 0;
@@ -71,12 +72,9 @@ float Sin(float x)
 
 
 
-/*Calcul du cosinus avec une série : Cette opération retourne la valeur du calcul du
-cosinus à partir d’une série (voir l’annexe C). L’angle en radians(x) est spécifié lors de
-l’appel et la valeur retournée est le résultat du calcul. Les deux valeurs sont des
-nombres réels. Le nombre de termes utilisés dans la série pour le calcul est spécifié
-globalement uniquement par une constante (C) et n’est pas passé en
-paramètre.*/
+// Description: fonction qui calcule le cosinus d'une valeur à partir d'une série de C termes
+// Préconditions: réel x
+// Postconditions: réel cos(x)
 float Cos(float x)
 {
     float rep = 0;

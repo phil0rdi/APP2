@@ -5,8 +5,6 @@
 
 #define PI 3.14159265359
 
-const int test = 12;
-
 int main(int argc, char **argv)
 {
 
